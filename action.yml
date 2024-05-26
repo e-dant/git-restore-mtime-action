@@ -1,12 +1,11 @@
-name: 'git-restore-mtime'
-description: "Restore file's modified time (timestamp) based on git commits"
-author: 'Pixelcop Research, Inc.'
+name: git-restore-mtime
+author: Pixelcop Research, Inc.
+description: Restore file modification time in the current git tree based on git commits
 branding:
-  icon: 'clock'
-  color: 'orange'
+  icon: clock
+  color: orange
 runs:
-  using: "composite"
+  using: composite
   steps:
     - shell: bash
-      run: |
-        $GITHUB_ACTION_PATH/git-restore-mtime
+      run: python3 "$GITHUB_ACTION_PATH/git-restore-mtime"
